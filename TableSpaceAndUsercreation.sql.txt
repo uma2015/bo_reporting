@@ -1,0 +1,32 @@
+################################################################
+-- Log on as sys user and create User & Tablespaces under sys account for learn_user
+################################################################
+
+--  CREATE TABLE SPACE
+CREATE TABLESPACE institute_ts DATAFILE 'C:/Oracle_tablespaces/institute.dbf' SIZE 10M;
+
+-- VERIFY
+SELECT * FROM dba_tablespaces;
+
+-- CREATE USER
+
+CREATE USER LEARN_USER IDENTIFIED BY LEARN_USER DEFAULT TABLESPACE INSTITUTE_TS;
+
+-- VERIFY
+SELECT * FROM DBA_USERS where username like '%user%';
+
+-- GRANT PRIVILEGES
+SELECT * FROM DBA_ROLES;
+
+
+GRANT CONNECT, RESOURCE, SELECT_CATALOG_ROLE, CREATE VIEW, CREATE SYNONYM, CREATE SESSION
+, CREATE PROCEDURE, CREATE TRIGGER, CREATE FUNCTION
+TO LEARN_USER;
+
+-- VERIFY 
+SELECT * FROM DBA_ROLE_PRIVS WHERE GRANTEE = 'LEARN_USER';
+
+
+################################################################
+-- Log on as learn_user and create tables...
+################################################################
