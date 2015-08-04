@@ -1,5 +1,5 @@
 ################################################################
--- Log on as sys user and create User & Tablespaces under sys account for learn_user
+-- Log on as sys user and create User & Tablespaces under sys account for LEARN_USER
 ################################################################
 
 --  CREATE TABLE SPACE
@@ -28,5 +28,6 @@ SELECT * FROM DBA_ROLE_PRIVS WHERE GRANTEE = 'LEARN_USER';
 
 
 ################################################################
--- Log on as learn_user and create tables...
+-- Log on as LEARN_USER and create tables...
 ################################################################
+
