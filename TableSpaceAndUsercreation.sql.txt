@@ -31,3 +31,16 @@ SELECT * FROM DBA_ROLE_PRIVS WHERE GRANTEE = 'LEARN_USER';
 -- Log on as LEARN_USER and create tables...
 ################################################################
 
+-- drop type(s)/sequence(s)
+-- create type(s)/sequence(s) (along with  synonyms, grants )
+
+-- drop table
+-- create table(s) (along with  synonyms, grants )
+-- Any insert/update statements
+
+-- create view(s) (along with  synonyms, grants )
+
+-- create functions/ procedures / packages (s) (along with  synonyms, grants )
+
+-- test github commit
+SELECT * FROM DUAL;
